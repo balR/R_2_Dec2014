@@ -1,4 +1,4 @@
-head(faithful)              # It's a quantitative data ( continous data )
+﻿head(faithful)              # It's a quantitative data ( continous data )
 dim(faithful)               # dimensions of faithful data set 
 duration <- faithful$eruptions
 wating <- faithful$waiting
@@ -1057,7 +1057,7 @@ Dec 06 2014
 
 Learning R:
 
-
+Working on database 
 
 
 
