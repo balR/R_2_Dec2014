@@ -1,0 +1,1082 @@
+head(faithful)              # It's a quantitative data ( continous data )
+dim(faithful)               # dimensions of faithful data set 
+duration <- faithful$eruptions
+wating <- faithful$waiting
+head(cbind(duration,wating))   # Important to bind the variables of a table otherwise scatter plot will give error
+faithful[,1]
+faithful[,2]
+max(faithful$duration)
+max(faithful$eruptions)
+min(faithful$eruptions)
+max(faithful$waiting)
+min(faithful$waiting)
+plot(eruptions,waiting,xlab="Erutpion duration", ylab="Waiting for eruption to gets completed", main="Eruption v/s waiting")
+plot(duration,wating,xlab="Eruptions duration", ylab="Waiting for eruptions to get completed", main="Eruptions v/s waiting")
+abline(lm(duration~wating))     # trend line for linear regression model
+abline(lm(wating~duration))     # Be careful. lm works with y vs x and not x vs y
+# Stem and leaf plot 
+duration = faithful$eruptions
+stem(duration)                  # Check out. Graphs are getting created at the column level
+# Cumulative relative frequency graph
+duration <- faithful$eruptions
+breaks <- seq(1.5, 5.5, by=.5)
+breaks
+duration.cut <- cut(duration, breaks, right=F)
+duration.cut
+duration.cutt <- cut(duration,breaks,right=T)   # Check the parenthesis. What is the difference between the two.
+duration.cutt
+duration.freq <- table(duration.cut)           # For table it is important to create the sets 
+duration.freq
+duration.freqq <- table(faithful$duration)  
+duration.freqq                # Check out . It did not show anything as the classes did not create.
+# Seems like this is good flow.    cbind -> seq -> cut -> table 
+duration.cumfreq <- cumsum(duration.freq)
+duration.cumfreq               # Very important to know the difference between table and cumsum and check the prerequisite before you have to do to get the desired results
+duration.cumrelfreq <- duration.cumfreq/nrow(faithful)
+duration.cumrelfreq
+cumrelfreq0 <- c(0, duration.cumrelfreq)
+cumrelfreq0
+plot(breaks, cumrelfreq0, main="Old faithful eruptions", xlab="Duration", ylab="Cumulation eruptions proportion")
+# Lines to connect the points
+lines(breaks, cumrelfreq0)
+par(bg=yellow)
+lines(breaks, cumrelfreq0, col="Red")
+par(bg="Blue")
+lines(breaks, cumrelfreq0, col="Red")
+# Instead of CDF calculation you can also use built-in function 
+Fn = ecdf(duration)
+plot (Fn, main="Old faithful eruptions", xlab="Duration", ylab="Cumulative eruptions proportion")
+#Histogram
+duration <- faithful$eruptions
+par(bg="Green")
+hist(duration, bg="Green4")
+hist(duration, bg="Green4", col="Grey")    # if bg is giving in command than it is local otherwise it is global 
+colors <- c("yellow","red","green","violet","orange","blue","pink","cyan")
+hist(duration,right=F,col=colors,main="Old faithful eruptions",xlab="Duration minutes")
+# Frequency distribution
+duration = faithful$eruptions
+range(duration)
+range(faithful$waiting)
+break1 = seq(1.5,5.5,by=.5)
+break1     # After checking the range, break into non-overlapping subintervals 
+duration.cuts <- cut(duration, break1, right=F)
+duration.cuts
+# Table is use for frequency distribution
+duration.freqqq <- table(duration.cuts)
+duration.freqqq
+# Visualizations of frequency table
+duration.freqqq0 <- c(0, duration.freqqq)
+duration.freqqq0
+
+library(MASS)
+painters
+x <- table(painters$School)
+x
+
+library(MASS)
+painters
+x <- table(painters$School)
+x
+hist(x,col="Grey",bg="Blue2")
+cbind(x)
+hist(x)
+school.relfreq= x/nrow(painters)
+school.relfreq
+old = options(digits=1)     # It will create readable format 
+school.relfreq
+options(old)
+old = options(digits=1)
+cbind(school.relfreq)
+options(old)             # It will restores the old options
+
+options(old)             # It will restores the old options
+barplot(school.relfreq)
+barplot(x)
+# Visualization you have barplot, histogram, seed & leaf, boxplot, abline + lm
+
+> sd(c_painters$Composition)
+[1] 2
+> summary(c_painters$Composition)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+     10      12      14      13      15      16 
+> tapply(painters$Composition,mean)
+Error : unique() applies only to vectors
+> tapply(painters$Composition,painters$School,,mean)
+ [1] 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 3 3 3 3 3 3 4 4 4 4 4 4 4 4 4 4 5 5 5 5 5 5
+[39] 5 6 6 6 6 7 7 7 7 7 7 7 8 8 8 8
+> tapply(painters$Composition,painters$School,mean)
+> 
+ A  B  C  D  E  F  G  H 
+10 12 13  9 14  7 14 14
+faithful and painters
+
+========================
+
+
+
+BA-Sales Anaalytics
+---------------------
+
+
+Agent Analystics
+
+Incentive program and effectiveness
+
+Appreciatinng agents 
+
+
+Revenue is one of the parameters ...
+
+
+Proposal:
+
+
+Best Practices 
+Hospitality
+
+POC needs to be done 
+
+Datasets and variables 
+
+High level solution 
+
+Approach?
+
+Standard framework?
+
+B2B agent?
+
+
+
+
+
+Business Objective - Solution 
+Data Source - Transacctional data 
+Stakeholders - customer, travel agent, company, 
+Duration of project
+
+
+1. Analytics - 
+
+2. Optimization (Sales force manaagement) -
+
+3. KPIs - 
+
+==================
+
+Agent incentive program 
+
+Deals program in BA
+
+Big data :
+
+GDS : Expedia  
+
+Company -> IATA+SITA -> GDS -> Travel Agent -> Customers 
+
+2017 :
+
+Hospitality firms:
+
+
+
+
+
+
+
+
+==============================
+
+library()
+setwd("C://Change Request No. 4840848")
+
+==============================
+
+class1 <- read.csv("class_1.csv")
+class2 <- read.csv("class_2.csv")
+class2 <- read.csv("class_3.csv")
+class2 <- read.csv("class_2.csv")
+class3 <- read.csv("class_3.csv")
+class3 <- read.csv("class_4.csv")
+class3 <- read.csv("class_3.csv")
+class4 <- read.csv("class_4.csv")
+class5 <- read.csv("class_5.csv")
+class6 <- read.csv("class_6.csv")
+region_lookup <- read.csv("region_lookup.csv")
+dim(class1)
+class_clean <- class1[complete.cases(class1),]
+dim(class_clean)
+classlist <- list(class1, class2, class3, class4, class5, class6)
+classlist[[1]]
+classlist[[1]][1,1]
+lapply(classlist, function(x) x[,4], mean)
+lapply(classlist, function(x) x[,4], mean)
+lapply(classlist, function(x) mean[,4])
+lapply(classlist, mean)
+lapply(classlist, mean, na.rm = T)
+lapply(classlist, (mean ,na.rm = T))
+lapply(classlist, (mean[,4] ,na.rm = T))
+lapply(classlist, mean)
+lapply(classlist[,4], mean)
+lapply(classlist[4], mean)
+lapply(classlist, function(x) x[,4], mean)
+rbind(class1, class2, class3, class4, class5, class6)
+rbind(class1, class2, class3, class4, class5, class6) - > entire_list
+rbind(class1, class2, class3, class4, class5, class6) -> entire_list
+entire_list_clean <- entire_list[complete.cases(entire_list),]
+dim(entire_list_clean)
+entire_list_clean <- class1[complete.cases(entire_list),]
+tail(class1)
+dim(class1)
+entire_list_clean <- class1[complete.cases(entire_list),]
+dim(entire_list_clean)
+dim(entire_list_clean)
+tail(entire_list_clean)
+complete.cases(entire_list)
+entire_list_clean <- class1[complete.cases(entire_list),]
+merge(entire_list_clean, region_lookup, by = region_code, all.x = T)
+merge(entire_list_clean, region_lookup, by = "region_code", all.x = T)
+entire_list_clean <- class1[complete.cases(entire_list),]
+entire_list_clean <- entire_list[complete.cases(entire_list),]
+merge(entire_list_clean, region_lookup, by = "region_code", all.x = T) -> entire_list_merged
+merge(entire_list_clean, region_lookup, by.x = "region_code",by.y = "region_code", all.x = T) -> entire_list_merged
+dim(entire_list_clean)
+merge(entire_list_clean, region_lookup, by = "region_code", all.y = T)
+entire_list_clean$sum <- sum(entire_list_clean[,(4:9)])
+head(entire_list_clean)
+entire_list_clean$sum <- apply(entire_list_clean[,(4:9)], 1, sum)
+head(entire_list_clean)
+entire_list_clean$sum <- apply(entire_list_clean[,(4:9)], 2, sum)
+entire_list_clean$sum <- apply(entire_list_clean[,(4:9)], 1, sum)
+entire_list_clean$sum <- apply(entire_list_clean[,(4:9)], 2, sum)
+nrow(entire_list_clean)
+entire_list_clean[nrow(entire_list_clean)+1,(4:8)] <- apply(entire_list_clean[(1:832),],2, sum)  
+entire_list_clean[(nrow(entire_list_clean)+1),(4:8)] <- apply(entire_list_clean[(1:832),],2, sum)  
+entire_list_clean[(nrow(entire_list_clean)+1),(4:8)] <- apply(entire_list_clean[(1:832),(4:8)],2, sum)  
+entire_list_clean
+rowname(entire_list_clean)
+rownames(entire_list_clean)
+rownames(entire_list_clean)[833]
+rownames(entire_list_clean)[833] = "total"
+rownames(entire_list_clean)[833]
+tail(entire_list_clean)
+entire_list_clean[(nrow(entire_list_clean)+1),(4:8)] <- apply(entire_list_clean[(1:832),(4:8)],2, sum)  
+tail(entire_list_clean)
+entire_list_clean$physics_pf <- ifelse(entire_list_clean$physics >= 40, 1,0)
+head(entire_list_clean)
+aggregate(entire_list_clean$student.id, list(entire_list_clean$region_code), length)
+tapply(entire_list_clean$student.id, list(entire_list_clean$region_code), length)
+aggregate(entire_list_clean$physics_pf, list(entire_list_clean$region_code), sum)
+aggregate(entire_list_clean$physics_pf, list(entire_list_clean$region_code), mean)
+entire_list_clean$physics_pf <- ifelse(entire_list_clean$physics >= 40, "pass",)
+entire_list_clean$physics_pf <- ifelse(entire_list_clean$physics >= 40, "pass","fail")
+aggregate(entire_list_clean$physics_pf, list(entire_list_clean$region_code), mean)
+aggregate(entire_list_clean$physics_pf, list(entire_list_clean$region_code), length)
+aggregate(entire_list_clean$physics_pf, list(entire_list_clean$physics_pf,entire_list_clean$region_code), length)
+install.packages("reshape2")
+library(reshape2)
+aggregate(entire_list_clean$physics_pf, list(entire_list_clean$physics_pf,entire_list_clean$region_code), length) -> a
+a
+a <- dcast(Group.2 ~Group.1)
+a <- dcast(a, Group.2 ~ Group.1)
+a
+history()
+history(max.show= Inf)
+
+================
+
+name <- c("Adam", "Rick", ""Ren")
+name <- c("Adam", "Rick", "Ren")
+age <- c(25,27,24)
+city <- ("Sydney", "Melbou", "Denver")
+city <- c("Sydney", "Melbou", "Denver")
+db <- data.frame(name,age,city)
+db
+db <- cbind(name, age, city)
+db
+class(db)
+db <- as.data.frame(db)
+class(db)
+db
+class1 <- read.csv("class.csv")
+getwd()
+class1 <- read.csv("class1.csv")
+class1 <- read.csv("class_1.csv")
+class1 <- read.csv("C:\Users\santhoshkumar.sasana\Desktop\class_1.csv")
+class1 <- read.csv("C:\\Users\\santhoshkumar.sasana\\Desktop\\class_1.csv")
+dim(class1)
+colnames(class1)
+class1
+head(class1)
+head(class1, n = 10)
+table(class1$gender)
+summary(class1)
+class1[2,2]
+sum(class1$physics)
+sum(class1$physics,na.rm = T)
+sum(class1[,4],na.rm = T)
+class[,4]
+class1[,4]
+max(class1$physics
+)
+max(class1$physics, na.rm = T)
+class_100 <- class1[1:100,:]]
+class_100 <- class1[1:100,:]
+class_100 <- class1[1:100,]
+class_65 <- subset(class1, physics >65)
+dim(class_65)
+class_65 <- subset(class1, physics >65 & maths >70)
+dim(class1)
+class_65 <- subset(class1, (physics >65 & maths >70))
+dim(class1)
+dim(class_65)
+complete.cases(class1)
+class_clean <- class1[complete.cases(class1),]
+dim(class_clean)
+class_clean <- class1[1,]
+class_clean <- class1[1:3,]
+class_clean <- class1[complete.cases(class1),]
+class_clean$mat_phy <- class_clean$maths + class_clean$physics
+head(class_clean)
+class_reg_1 <- subset(class1, region_code == 1)
+class_reg_1 <- subset(class1, region_code == c(1,3,5,6))
+class_reg_1 <- subset(class1, region_code %in% c(1,3,5,6))
+dim(class_reg_1)
+class_reg_1 <- subset(class1, region_code == 1)
+dim(class_reg_1)
+class_reg_1 <- subset(class1, region_code == c(1,3,5,6))
+dim(class_reg_1)
+class_reg_1 <- subset(class1, region_code == 6)
+dim(class_reg_1)
+table(class1$region_code)
+table(class1$physics, class1$region_code)
+aggregate(class1$physics, list(class1$region_code), sum)
+aggregate(class_clean$physics, list(class_clean$region_code), sum)
+aggregate(class_clean$physics, list(class_clean$region_code), mean)
+aggregate(class_clean$physics, class_clean$region_code, mean)
+aggregate(class_clean$physics, by =\class_clean$region_code, mean)
+aggregate(class_clean$physics, by =class_clean$region_code, mean)
+aggregate(class_clean$physics, list(class_clean$region_code, class_clean$gender), mean)
+aggregate(subset(class_clean, physics >60)$physics, list((subset(class_clean, physics >60)$region_code, class_clean$gender), mean)
+aggregate(subset(class_clean, physics >60)$physics, list((subset(class_clean, physics >60)$region_code), mean)
+aggregate(subset(class_clean, physics >60)$physics, list(subset(class_clean, physics >60)$region_code), mean)
+class_clean$physics
+subset(class_clean, physics > 70)$physics
+aggregate(class_clean$physics + class_clean$maths, list(class_clean$region_code, class_clean$gender), mean)
+aggregate(class_clean$physics + class_clean$maths, list(class_clean$region_code, class_clean$gender), max)
+aggregate(class_clean$physics, list(class_clean$region_code),max)
+aggregate(class_clean$maths, list(class_clean$region_code),max)
+aggregate(class_clean$physics, list(class_clean$region_code),max) -> a
+aggregate(class_clean$maths, list(class_clean$region_code),max) -> b
+cbind(a,b)
+merge(a, b, by = Group.1)
+merge(a, b, by = "Group.1")
+merge(a, b, by = "Group.1") -> c
+colnames(c)
+colnames(c)[2]
+d <- cbind(a,b)
+d$Group.1
+d$x
+colnames(c)[2]
+colnames(c)[2] = "physics"
+a <- c(1,2,3)
+b <- c(2,3,4)
+c <- c(1,2,1)
+d <- cbind(a,b,c)
+d
+d <- rbind(a,b,c)
+d
+c <- c(1,2,1,1)
+d <- rbind(a,b,c)
+d
+class(d)
+history()
+history(max.show = Inf)
+
+==================
+
+x <- stats::rnorm(50)
+
+> opar <- par(bg = "white")
+
+> plot(x, ann = FALSE, type = "n")
+
+> abline(h = 0, col = gray(.90))
+
+> lines(x, col = "green4", lty = "dotted")
+
+> points(x, bg = "limegreen", pch = 21)
+
+> title(main = "Simple Use of Color In a Plot",
++       xlab = "Just a Whisper of a Label",
++       col.main = "blue", col.lab = gray(.8),
++       cex.main = 1.2, cex.lab = 1.0, font.main = 4, font.lab = 3)
+
+> ## A little color wheel.	 This code just plots equally spaced hues in
+> ## a pie chart.	If you have a cheap SVGA monitor (like me) you will
+> ## probably find that numerically equispaced does not mean visually
+> ## equispaced.  On my display at home, these colors tend to cluster at
+> ## the RGB primaries.  On the other hand on the SGI Indy at work the
+> ## effect is near perfect.
+> 
+> par(bg = "gray")
+
+> pie(rep(1,24), col = rainbow(24), radius = 0.9)
+
+> title(main = "A Sample Color Wheel", cex.main = 1.4, font.main = 3)
+
+> title(xlab = "(Use this as a test of monitor linearity)",
++       cex.lab = 0.8, font.lab = 3)
+
+> ## We have already confessed to having these.  This is just showing off X11
+> ## color names (and the example (from the postscript manual) is pretty "cute".
+> 
+> pie.sales <- c(0.12, 0.3, 0.26, 0.16, 0.04, 0.12)
+
+> names(pie.sales) <- c("Blueberry", "Cherry",
++ 		      "Apple", "Boston Cream", "Other", "Vanilla Cream")
+
+> pie(pie.sales,
++     col = c("purple","violetred1","green3","cornsilk","cyan","white"))
+
+> title(main = "January Pie Sales", cex.main = 1.8, font.main = 1)
+
+> title(xlab = "(Don't try this at home kids)", cex.lab = 0.8, font.lab = 3)
+
+> ## Boxplots:  I couldn't resist the capability for filling the "box".
+> ## The use of color seems like a useful addition, it focuses attention
+> ## on the central bulk of the data.
+> 
+> par(bg="cornsilk")
+
+> n <- 10
+
+> g <- gl(n, 100, n*100)
+
+> x <- rnorm(n*100) + sqrt(as.numeric(g))
+
+> boxplot(split(x,g), col="lavender", notch=TRUE)
+
+> title(main="Notched Boxplots", xlab="Group", font.main=4, font.lab=1)
+
+> ## An example showing how to fill between curves.
+> 
+> par(bg="white")
+
+> n <- 100
+
+> x <- c(0,cumsum(rnorm(n)))
+
+> y <- c(0,cumsum(rnorm(n)))
+
+> xx <- c(0:n, n:0)
+
+> yy <- c(x, rev(y))
+
+> plot(xx, yy, type="n", xlab="Time", ylab="Distance")
+
+> polygon(xx, yy, col="gray")
+
+> title("Distance Between Brownian Motions")
+
+> ## Colored plot margins, axis labels and titles.	 You do need to be
+> ## careful with these kinds of effects.	It's easy to go completely
+> ## over the top and you can end up with your lunch all over the keyboard.
+> ## On the other hand, my market research clients love it.
+> 
+> x <- c(0.00, 0.40, 0.86, 0.85, 0.69, 0.48, 0.54, 1.09, 1.11, 1.73, 2.05, 2.02)
+
+> par(bg="lightgray")
+
+> plot(x, type="n", axes=FALSE, ann=FALSE)
+
+> usr <- par("usr")
+
+> rect(usr[1], usr[3], usr[2], usr[4], col="cornsilk", border="black")
+
+> lines(x, col="blue")
+
+> points(x, pch=21, bg="lightcyan", cex=1.25)
+
+> axis(2, col.axis="blue", las=1)
+
+> axis(1, at=1:12, lab=month.abb, col.axis="blue")
+
+> box()
+
+> title(main= "The Level of Interest in R", font.main=4, col.main="red")
+
+> title(xlab= "1996", col.lab="red")
+
+> ## A filled histogram, showing how to change the font used for the
+> ## main title without changing the other annotation.
+> 
+> par(bg="cornsilk")
+
+> x <- rnorm(1000)
+
+> hist(x, xlim=range(-4, 4, x), col="lavender", main="")
+
+> title(main="1000 Normal Random Variates", font.main=3)
+
+> ## A scatterplot matrix
+> ## The good old Iris data (yet again)
+> 
+> pairs(iris[1:4], main="Edgar Anderson's Iris Data", font.main=4, pch=19)
+
+> pairs(iris[1:4], main="Edgar Anderson's Iris Data", pch=21,
++       bg = c("red", "green3", "blue")[unclass(iris$Species)])
+
+> ## Contour plotting
+> ## This produces a topographic map of one of Auckland's many volcanic "peaks".
+> 
+> x <- 10*1:nrow(volcano)
+
+> y <- 10*1:ncol(volcano)
+
+> lev <- pretty(range(volcano), 10)
+
+> par(bg = "lightcyan")
+
+> pin <- par("pin")
+
+> xdelta <- diff(range(x))
+
+> ydelta <- diff(range(y))
+
+> xscale <- pin[1]/xdelta
+
+> yscale <- pin[2]/ydelta
+
+> scale <- min(xscale, yscale)
+
+> xadd <- 0.5*(pin[1]/scale - xdelta)
+
+> yadd <- 0.5*(pin[2]/scale - ydelta)
+
+> plot(numeric(0), numeric(0),
++      xlim = range(x)+c(-1,1)*xadd, ylim = range(y)+c(-1,1)*yadd,
++      type = "n", ann = FALSE)
+
+> usr <- par("usr")
+
+> rect(usr[1], usr[3], usr[2], usr[4], col="green3")
+
+> contour(x, y, volcano, levels = lev, col="yellow", lty="solid", add=TRUE)
+
+> box()
+
+> title("A Topographic Map of Maung	a Whau", font= 4)
+
+> title(xlab = "Meters North", ylab = "Meters West", font= 3)
+
+> mtext("10 Meter Contour Spacing", side=3, line=0.35, outer=FALSE,
++       at = mean(par("usr")[1:2]), cex=0.7, font=3)
+
+> ## Conditioning plots
+> 
+> par(bg="cornsilk")
+
+> coplot(lat ~ long | depth, data = quakes, pch = 21, bg = "green3")
+
+==========================
+##Code to draw a point graph with dotted lines 
+
+x <- stats::rnorm(50)
+opar <- par(bg='white')
+plot(x, ann=FALSE, type='n')
+abline(h=0, col=grey(.90))
+lines(x, col='green4', lty='dotted')
+points(x, bg="limegreen", pch=21)
+title(main='Learning graph', xlab='points', ylab='range', col.main='blue', col.lab='red',font.main=4, font.lab=3)
+
+
+## code to draw a pie chart 
+
+par(bg='grey')
+pie(rep(1,24), rainbow(24), radius=0.9)
+title(main='pie chart', col.main='red', cex.main=3)
+title(xlab='(Check this out)', col.lab='blue', cex.lab=4)
+
+## Adding data and showing in graph 
+
+pie.sales <- c(6,2,3,4,5,6,7,8)
+names(pie.sales) <- c('a','aa','b','vv','f','g','h','j')
+pie(pie.sales,col=c('purple','blue','red','yellow','red','green4','green2','blue'))
+title(main='pie.sales', col.main='red', cex.main=5)    
+title(xlab='learning',col.lab='blue',cex.l	ab=2)
+
+## Draw boxplot 
+
+par(bg='cornsilk')
+n<-10
+g<-gl(n,100,n*100)
+x<-rnorm(n*100)+sqrt(as.numeric(g))
+boxplot(split(x,g), col='lavender', notch=T)
+title(main='boxplot',xlab='learning bxplot', font.main=2, font.lab=3, col.main='blue', col.lab='green')
+
+## fill color between curves
+
+par(bg='white')
+n<-100
+x<-c(0,cumsum(rnorm(n)))
+y<-c(0,cumsum(rnorm(n)))
+xx<-c(0:n,n:0)
+yy<-c(x,rev(y))
+plot(xx,yy,type='n',xlab='time',ylab='distance')
+polygon(xx,yy,col='gray')
+title('Distance between')
+
+##
+
+
+================================
+
+
+SQL Queries-
+
+select proda as p1, prodb as p2 from products
+where price > (select avg(price) from products)
+
+=================================
+
+** Practice data science with R
+
+uciCar <- read.table('http://www.win-vector.com/dfiles/car.data.csv', sep=',', header=T)
+
+class(uciCar)
+
+help(class(uciCar))
+
+summary(uciCar)
+
+dim(uciCar)
+
+#Working with other data formats 
+rjson
+XML
+rmongodb
+DBI
+
+#Working with unstructured data 
+German bank credit dataset : http://mng.bz/mZbu
+
+For this you need 'Schema documentation or a data dictionary"
+
+Read data from URL directly or save the data in file and then store it 
+
+d <- read.table(paste('http://archive.ics.uci.edu/ml/','machine-learning-databases/statlog/german/german.data', sep=' '), stringAsFactors=F, header=F)
+print(d[1:3,])
+
+# Setting column names 
+colnames(d) <- c('Status.of.existing.checking.account','Duration.in.month','Credit.history','Purpose','Credit Amount','Saving account/bonds',......'Good.Loan')
+
+d$Good.Loan <- as.factor(ifelse(d$Good.Loan==1,'GoodLoan','BadLoan'))
+print(d[1:3,])
+
+# c() is to construct a avector. 
+
+help(class(d))    # It will help us to know the dataframe variables with the dictionary of every variable 
+
+# Building a map to interpret loan use codes
+
+mapping  <- list('A40'='car(new)', 'A41'='car(used)', 'A42'='furniture/equipment'.......)
+
+# Lists are R's map structures. For applied vector, list will return vector 
+
+# Transforming the character data ( car data ) 
+
+for( i in 1:(dim(d)) [2]) {
+   if(class(d[,i]) == 'character') {
+         d[,i] <- as.factor(as.character(mapping[d[,i]]))
+ }
+}
+
+# [] indexing column is vectorized
+
+# Find prepared dataset here 
+
+https://github.com/WinVector/zmPDSwR/tree/master/Statlog/
+
+table(d$Purpose, d$Good.Loan)
+
+------------
+
+# Working with realtional databases 
+
+The data present in database is in normalized form and with joins
+
+# Production size example: US Census 2011 national PUMS American community Survey data 
+www.census.gov/acs/www/data_documentation/pums_data/
+
+3 million individuals and 1.5 million households = data size in GBs
+
+# With this a laptop and R are not sufficient and common thoughts go to work with MapReduce, dataabase clusters(Hadoop etc.), SQL database servers. As it is important to have database for data handling 
+
+3-12-2013
+
+PUMS Data set from:
+
+http://www.census.gov/acs/www/data_documentation/pums_data/
+
+select "2011 ACS 1-year PUMS"        # Important to know exact location in documentation for click through license 
+
+select "2011 ACS 1-year Public Use Microdata Samples\(PUMS) - CSV format"
+
+
+download "United States Population Records" and "United States Housing Unit Records"
+
+
+  # Actual files downloaded 
+
+       http://www2.census.gov/acs2011_1yr/pums/csv_pus.zip
+       http://www2.census.gov/acs2011_1yr/pums/csv_hus.zip
+
+
+  # To check the size of the files downloaded 
+
+       ls -lh *.zip
+
+
+       shasum *.zip
+
+=============
+
+For Data Scientist it is important to have all your scripts in version control .... Github ( Learn it properly)
+
+
+============
+
+
+
+# Staging the data into a database 
+
+# Very important read it properly 
+
+# Structured data at a scale of millions of rows is best handled in a database.In such scenarios you have two things to go for 1. Text processing tools 2. Database tools ( It is better because you can have data in columns and rows) 
+
+There are 3 database tools -
+    1. Serverless database engine H2
+    2. database loading tool SQL Screwdriver
+    3. database browser SQuirrel SQL
+
+
+# What data scientist need -
+     1. Analytical tool - R 
+     2. Database 
+     3. Version Control - Github
+     4. Big data scripting language - Python
+
+# Big data analytics involves -
+    1. Machine learning 
+    2. Visual Analytics 
+    3. Text Processing 
+    4. Revenue Management 
+
+
+# Note: R studio and Database require Java. ( Download from: http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+( Java enabled in the web browser is currently considered an unacceptable security risk)
+
+----------
+
+# Important tools to be downloaded -
+
+1. Git 
+2. RStudio - IDE for R ( it comes up with text editor)
+
+---------
+
+# Powerful way of finding R packages is views ( http://cran.r-project.org/web/views/)
+
+Example - install.packages(ctv) -> library('ctv') -> install.views('Timeseries')
+
+---------
+
+#Sites ( Resources)
+
+CRAN, Stack Overflow R section, Quick-R, LearnR, R-bloggers
+
+---------
+
+# Binding values to function arguments
+
+divide <- function(numerator,denominator) { numerator/denominator }
+divide(1,2)
+divide(denominator=2, numerator=1)
+
+----------
+
+Vectorized operators : ==,&
+
+----------
+
+# Loading data from HTTPS sources 
+
+
+
+================
+## Random FOrest in R
+
+
+data(airquality)  # airquality is the dataset
+set.seed(131)  # no of seeds in random forests, it is no.of random points which should be taken from the data sets
+ozone.rf <- randomForest(Ozone ~ ., data=airquality, ntree=50,
+                         importance=TRUE, na.action=na.omit)   #ozone.rf  is model name, airquality is the dataset,ntree is no of trees of the randomforest
+
+print(ozone.rf) 
+===============
+
+# BIG DATA 
+
+# Big data differs from narrow applications that look at just one source of data, yielding small answers. 
+     Structured - purchase histories, customer relationship management (CRM) data and intelligence from industry partners
+     Unstructured - social media, blogs, videos, other sources
+
+# Usage -
+      1. Customer Intelligence
+      2. Operational Effeciencies -
+    Sensors on a single commercial aircraft generate 20 terabytes of data an hour. Automobiles are reporting back data collected from onboard sensors and dealer service systems. And let’s not forget the growing tide of RFID equipped vehicles, crates and packages.
+
+    These incredible repositories of data, combined with machineto-machine interaction, are fueling a new wave of predictive analytics, services that enable equipment such as airplanes to determine their own maintenance schedule, alerting the supply chain to ensure that the needed parts arrive at the right place at the right time.
+
+    In call centers, analytics-infused CRM systems can review multiple data sources in real time to suggest offers that a representative can present to a customer.( Travel Agent and customer interactions )
+
+# Airlines are interested in 2 major trends - Big data and ancillary revenue( Customer intelligence ) 
+
+# Threat to airline companies : Oil prices, employee unions, growing competitions, change 
+
+# Big data analytics - High Volume, High Velocity, High Variety information assets 
+
+# Important to read -
+Background : 
+
+The retail industry is one of those which has been at the forefront of technology consumption (and sometimes development) of constructive data analytics to increase sales. - See more at: http://www.tnooz.com/article/big-data-how-airlines-should-use-it-more-effectively-to-boost-ancillary-revenue/#sthash.qvN5WGSm.dpuf
+
+Amazon and Netflix -> Successful recommendation algorithms 
+Target and Walmart -> Competitive pricing, shelf placements, Augmented Reality ( Google glass, Robot, selection of products..)
+
+# Big Data : Large VOlumes of data + real time analysis + On the fly value
+
+# Today's demand - Greater Value creation, increased personalization, 
+
+# POINTS TO THINK ABOUT :
+
+Here are some other questions that irlines can start asking themselves:
+•Are all my passengers going to need roaming facilities on their mobile phones when they travel away from their native land? Can I help them lower their roaming charges? Can I pre-stock local SIM cards of the destination I am flying to? (think: British Airways and JetStar)
+•For customers who are travelling on a business trip, can I help them arrange local transport like taxis? Or mobile phone chargers? Or International plugs? Or arrange for a pre-paid taxi from airport to hotel from the flight?
+•Inflight advertising? But caution must be exercised to do it tastefully and without intrusion. Mixing it with free Wi-Fi access and premium inflight entertainment could make it seem reasonable. One could target teenagers and low fare customers before premium passengers in a personalized manner.
+•Can I negotiate for priority immigration clearance for my business travellers who are authenticated by their employers for a certain fees? (think: IATA’s STB initiative)
+•Does the Airline know if a passenger should get a gift for his/her spouse because he/she happened to be in-flight on their Anniversary day? Can it help? Does it know the names of all the passengers who are travelling away from their homelands on Valentine’s Day with their partners? Christmas? Holidays? How does it make these passengers feel part of the celebrations and not like they are missing out on something being away from their loved ones?
+•And if you are an airline, that just want to focus on your core-competency of operating flights – safely, can you outsource pre-flight, inflight and post-flight ancillary operations to an entrepreneur with the highest potential? When you can outsource back-office operations, why not ancillary revenue operations? United Airlines with partnership with DirectTV, and Singapore Airlines’ Krishop being operated by DFASS are just two shining examples of the potential opportunities. With Airlines collecting valuable passenger information, these outsourcing partners can generate substantially higher values than the airlines can do themselves. 
+ 
+
+------
+
+# Advantage of Big data -
+
+• Optimizing revenue management
+• Customizing travel distribution
+• Transforming corporate travel
+• Enhancing internal operations
+• Boosting financial performance
+
+------
+
+# Companies who are working from begining are Google, ebay, LinkedIn, Facebook 
+ - Massive amount of data 
+       - new
+       - less structured 
+            - clickstreams
+            - web server logs 
+            - social network relationships 
+            - results of controlled experiments 
+
+------
+
+# Big data use in travel ( Pay off from big data in travel industry ) :
+
+1. Better decision support: 
+     - Forecasting customer demand ( by doing analysis of macroeconomic and weather data ) 
+     - Predictive maintenance of planes, engines, and other equipments based on sensor data ( Analyze senssor data ) 
+     
+
+2. New products and services for customers :
+     - Example : Outside travel industry, it has been extensively used by Google, LinkedIn, Facebook.
+     - Creator of data based products and services are online travel agents, travel serach firms, and leading technology providers.( Example: Amadeus helped in featured results and extreme search capabvilities for travel search experience; Hipmunk created Agony index and Ecstacy Index for hotel searches; KAYAK has developed a predicted price offering)
+
+NOTE: Aircraft component vendors can provide predictive maintenance services.
+
+Example: Product/Service Innovation from Amadeus 
+                      - Extreme search field. 
+                      - Featured Results 
+ 
+3. Big data helping players in travel industry form better customer relationships
+     - More revenue from better targeted products ( With Predictive analytics, the most favored destinations, lodging and dinning preferences, ancilliary services needs, and tourism experiences can be identified for each passenger. )
+     - Advanced approaches to customer targeting involve various forms of online travel advertising 
+
+Example -
+
+Criteo: Relevant and personalized ad - 8 times more click through on banners  - 8 times more likely to buy 
+( Collaborative filtering algorithm ; lets the company predict the most attractive travel package, air route, or hotel)
+
+New trend : Online travel advertising is social-based advertising 
+Exx: Facebook: It not only has huge customer network but also the ability to target ads across social network. 
+
+4. Cheaper and faster data processing -
+   Cheaper method to play with the data such as Hadoop, cassandra, neo4j, mongoDB etc.
+
+
+5. Seeking multiple benefits -
+   Facebook : Targeting algorithms address keywords in user profiles and other social signals, and are constantly being adjusted for better targeting.
+
+   Facebook also employs data from third parties such as Axciom and Epsilon to improve targeting. 
+
+   Facebook new tool as Custom Audiences ( allows travel companies to use their own lists of loyal or prospect customers, and target them with Facebook ads while still preserving customer privacy )
+
+   Facebook exchange is another tool on real time bidding on ad placement and retargeting. 
+
+===========================
+
+Big data challenges for the travel industry : 
+
+1. Key data is often fragmented across multiple functions and units 
+      Example -   Airline data on the passenger experience is spread across 
+                      - Flight operations 
+                      - Baggage 
+                      - Loyalty programs 
+                      - Complaint databases 
+                      - External sources like social media 
+              In order to make effective decisions about how to promote offers to customers and recover from service failures, airlines need to combine all of this information into one datawarehouse and one set of algorithms. ( Handling and utilizing customer data)
+
+Airline mostly uses TPF( Transaction processing facility ) but hadoop is difficult to integrate. 
+
+
+
+Big data database capability - Petabytes of data 
+
+
+Unstructured big data is often stored in distributed online transaction processing environment ( DOLTP)
+-----------------------
+
+# Big data usage in travel industry : 
+
+    1. Revenue Management 
+    2. Travel Management 
+    3. Internal Operations 
+    4. Financial performance management 
+
+
+1. Revenue Management : 
+    - Optimized pricing for the perishable commodities offered by the travel industry, such as airplane seats and hotel rooms 
+    - Example - Marriott
+              - Swiss International Airlines : Positive margins and revenue with its RMS particularly in European markets where the absence of code sharing and alliance relationships allows more pricing flexibility. ( by combining pricing and capacity management, and fast pricing changes )  
+              - AirFrance KLM : The system calculates and optimizes the revenue for origin/destination itineraries,a nd bases pricing on passenger profile.It also estimates the likelihood of cancellation and no show on flight and thus how much overbooking to allow. 
+              - Lufthansa - With in memory technology ( SAP's HANA system) 
+              - Frontier Airlines - New prices for short package before their competitors recognize
+   Note : External factors to be considered for Revenue Management are 
+              - Consumer demand 
+              - Weather 
+              - Prices of other goods and services 
+              - consumer confidence
+
+
+Example : Marriott 
+
+
+
+-----------------------
+
+# Key trend in distribution processes is "Personalization". 
+     - Personalization based on customer behaviors on the absence of them 
+     - Personalization based on social media relationaships 
+     - Personalization with regards to ancillary sales 
+     - Personalization involving the entire journey, not just a segment of it 
+     - Personalization based on location 
+     - Personalization based on scheduled disruptions 
+
+
+Example : British Airways through Customer Insights
+          BA with support of big data analytics team OPERA Solutions. 
+                 - Personal recognition
+                 - Service excellence and recovery 
+                 - Offers that inspire and motivate 
+
+---------------------------
+
+=========================================
+
+----------------------- 
+
+# Top 10 big data companies : 
+
+1. GE - Predictive modeling for component failure ( Accenture - Taleris; to predict mechanical malfunctions and reduce filght cancellations + Also, Abu Dhabi Ethiads ..... GE Ceo "the physical and analytical worlds"... ) 
+2. 
+
+    
+
+
+
+
+======
+
+Apply in following companies - 
+
+
+Start preparing for GAIQ...
+
+=====
+
+
+
+Hi Sam, 
+
+
+While doing exploratory research on Big data analytics, I eventually got something on Predictive analytics legitimate case study .
+
+
+GE in doing predictive analysis in partnership with Accenture. Please have a look.
+
+Post in "www.fastcompany.com"-
+
+ GE
+
+For harnessing data from its planes and trains to power a new Industrial Internet, potentially saving billions. General Electric is best known for its machine making, but it’s gotten smart and branded itself as a big-data company, too, by pushing its vision for an "Industrial Internet"—the notion that machines should be connected like the web in order to increase efficiency and reduce downtime. In 2012, it launched software to help airlines and railroads move their data to the cloud and partnered with Accenture to form Taleris, a startup that will help airlines predict mechanical malfunctions and reduce flight cancellations. The Abu Dhabi–based Etihad Airways was the first to deploy the tech in November.
+
+Company doing Predictive Analytics - Taleris "http://www.taleris.com/" "http://www.taleris.com/about.html" "http://www.taleris.com/clients.html" 
+
+
+United Airlines is a client of Taleris.
+
+
+
+
+ ** http://www.fastcompany.com/most-innovative-companies/2014/industry/big-data
+
+ ** http://web.stanford.edu/~ashishg/amdm/
+	 
+     
+
+ 
+================
+
+
+All of these are Java based, run on many platforms, and are open source. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
