@@ -835,7 +835,7 @@ print(ozone.rf)
 # Usage -
       1. Customer Intelligence
       2. Operational Effeciencies -
-    Sensors on a single commercial aircraft generate 20 terabytes of data an hour. Automobiles are reporting back data collected from onboard sensors and dealer service systems. And let’s not forget the growing tide of RFID equipped vehicles, crates and packages.
+    Sensors on a single commercial aircraft generate 20 terabytes of data an hour. Automobiles are reporting back data collected from onboard sensors and dealer service systems. And letÂ’s not forget the growing tide of RFID equipped vehicles, crates and packages.
 
     These incredible repositories of data, combined with machineto-machine interaction, are fueling a new wave of predictive analytics, services that enable equipment such as airplanes to determine their own maintenance schedule, alerting the supply chain to ensure that the needed parts arrive at the right place at the right time.
 
@@ -862,23 +862,23 @@ Target and Walmart -> Competitive pricing, shelf placements, Augmented Reality (
 # POINTS TO THINK ABOUT :
 
 Here are some other questions that irlines can start asking themselves:
-•Are all my passengers going to need roaming facilities on their mobile phones when they travel away from their native land? Can I help them lower their roaming charges? Can I pre-stock local SIM cards of the destination I am flying to? (think: British Airways and JetStar)
-•For customers who are travelling on a business trip, can I help them arrange local transport like taxis? Or mobile phone chargers? Or International plugs? Or arrange for a pre-paid taxi from airport to hotel from the flight?
-•Inflight advertising? But caution must be exercised to do it tastefully and without intrusion. Mixing it with free Wi-Fi access and premium inflight entertainment could make it seem reasonable. One could target teenagers and low fare customers before premium passengers in a personalized manner.
-•Can I negotiate for priority immigration clearance for my business travellers who are authenticated by their employers for a certain fees? (think: IATA’s STB initiative)
-•Does the Airline know if a passenger should get a gift for his/her spouse because he/she happened to be in-flight on their Anniversary day? Can it help? Does it know the names of all the passengers who are travelling away from their homelands on Valentine’s Day with their partners? Christmas? Holidays? How does it make these passengers feel part of the celebrations and not like they are missing out on something being away from their loved ones?
-•And if you are an airline, that just want to focus on your core-competency of operating flights – safely, can you outsource pre-flight, inflight and post-flight ancillary operations to an entrepreneur with the highest potential? When you can outsource back-office operations, why not ancillary revenue operations? United Airlines with partnership with DirectTV, and Singapore Airlines’ Krishop being operated by DFASS are just two shining examples of the potential opportunities. With Airlines collecting valuable passenger information, these outsourcing partners can generate substantially higher values than the airlines can do themselves. 
+Â•Are all my passengers going to need roaming facilities on their mobile phones when they travel away from their native land? Can I help them lower their roaming charges? Can I pre-stock local SIM cards of the destination I am flying to? (think: British Airways and JetStar)
+Â•For customers who are travelling on a business trip, can I help them arrange local transport like taxis? Or mobile phone chargers? Or International plugs? Or arrange for a pre-paid taxi from airport to hotel from the flight?
+Â•Inflight advertising? But caution must be exercised to do it tastefully and without intrusion. Mixing it with free Wi-Fi access and premium inflight entertainment could make it seem reasonable. One could target teenagers and low fare customers before premium passengers in a personalized manner.
+Â•Can I negotiate for priority immigration clearance for my business travellers who are authenticated by their employers for a certain fees? (think: IATAÂ’s STB initiative)
+Â•Does the Airline know if a passenger should get a gift for his/her spouse because he/she happened to be in-flight on their Anniversary day? Can it help? Does it know the names of all the passengers who are travelling away from their homelands on ValentineÂ’s Day with their partners? Christmas? Holidays? How does it make these passengers feel part of the celebrations and not like they are missing out on something being away from their loved ones?
+Â•And if you are an airline, that just want to focus on your core-competency of operating flights Â– safely, can you outsource pre-flight, inflight and post-flight ancillary operations to an entrepreneur with the highest potential? When you can outsource back-office operations, why not ancillary revenue operations? United Airlines with partnership with DirectTV, and Singapore AirlinesÂ’ Krishop being operated by DFASS are just two shining examples of the potential opportunities. With Airlines collecting valuable passenger information, these outsourcing partners can generate substantially higher values than the airlines can do themselves. 
  
 
 ------
 
 # Advantage of Big data -
 
-• Optimizing revenue management
-• Customizing travel distribution
-• Transforming corporate travel
-• Enhancing internal operations
-• Boosting financial performance
+Â• Optimizing revenue management
+Â• Customizing travel distribution
+Â• Transforming corporate travel
+Â• Enhancing internal operations
+Â• Boosting financial performance
 
 ------
 
@@ -1028,7 +1028,10 @@ Start preparing for GAIQ...
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 72feb0de5bce30eed891207b3dbfacb202e822ac
 
 
 
@@ -1066,4 +1069,4 @@ Learning R:
  
 
 
-
+
