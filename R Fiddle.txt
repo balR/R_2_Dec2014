@@ -1028,24 +1028,6 @@ Start preparing for GAIQ...
 
 
 
-Hi Sam, 
-
-
-While doing exploratory research on Big data analytics, I eventually got something on Predictive analytics legitimate case study .
-
-
-GE in doing predictive analysis in partnership with Accenture. Please have a look.
-
-Post in "www.fastcompany.com"-
-
- GE
-
-For harnessing data from its planes and trains to power a new Industrial Internet, potentially saving billions. General Electric is best known for its machine making, but it’s gotten smart and branded itself as a big-data company, too, by pushing its vision for an "Industrial Internet"—the notion that machines should be connected like the web in order to increase efficiency and reduce downtime. In 2012, it launched software to help airlines and railroads move their data to the cloud and partnered with Accenture to form Taleris, a startup that will help airlines predict mechanical malfunctions and reduce flight cancellations. The Abu Dhabi–based Etihad Airways was the first to deploy the tech in November.
-
-Company doing Predictive Analytics - Taleris "http://www.taleris.com/" "http://www.taleris.com/about.html" "http://www.taleris.com/clients.html" 
-
-
-United Airlines is a client of Taleris.
 
 
 
@@ -1065,7 +1047,12 @@ All of these are Java based, run on many platforms, and are open source.
 
 
 
+===============
 
+Dec 06 2014
+------------
+
+Learning R:
 
 
 
